@@ -111,3 +111,35 @@ $ git push (Always pushes to main branch)
 
 To check the status of the repo
 $ git status
+-----------------------------
+To create a new project in eclipse:
+
+File -> New -> Project -> Java Project
+In the Dialogue box (new window)
+De-select the module.java check box
+Enter project name ("practice") and Click Finish
+
+Now in the explorer, expand the project folder
+Now Right Click src folder -> create -> new -> package
+Give the package name "day1"
+
+Right Click "day1" in explorer (under src), create -> new -> class
+Class name "HelloWorld"
+
+primitive types in Java:
+Numeric:
+	number only
+		byte
+		short
+		int 
+		long
+	number with precision/accuracy
+		float
+		double
+char
+boolean
+
+ARITHMETIC OPERATORS:
++ - * / %
+
+
