@@ -1103,3 +1103,62 @@ public void insertionSort(float[] array) {
 			j--;
 		}
 		array[j+1] = element;
+		
+WCE of insertion sort is O(n2)
+BCE of Insertion sort is O(n)
+
+We must avoid insertion sort for large sized arrays.
+We should prefer insertion sort for smaller sized arrays.
+We must used insertion sort when the array size is relatively small and it is some what already sorted.
+-------------------------------------------
+Partition.java
+
+package programs;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Partition {
+	
+	public static int partitionArray(double[] array, int low, int high) {
+		double pivot = array[high];
+		int j = low;
+		for(int i = low; i < high; i++) {
+			if(array[i] < pivot) {
+				double temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+				j++;
+			}
+		}
+		double temp = array[high];
+		array[high] = array[j];
+		array[j] = temp;
+		return j;
+	}
+}
+-------------------------------
+QuickSort.java
+
+package programs;
+
+import java.util.Arrays;
+
+public class QuickSort {
+
+	public static void quickSort(double[] array, int low, int high) {
+		if(low < high) {
+			int pivotIndex = Partition.partitionArray(array, low, high);
+			quickSort(array, low, pivotIndex-1);
+			quickSort(array, pivotIndex+1, high);
+		}
+	}
+	
+	public static void main(String[] args) {
+		double[] array = {12, 35, 54, 1.2, 2.1, 1.5, 1.7, 1.11, 1.05, 1.55};
+		System.out.println("Input Array: " + Arrays.toString(array));
+		quickSort(array, 0, array.length-1);
+		System.out.println("Sorted Array: " + Arrays.toString(array));
+	}
+}
+---------------------------------------------
