@@ -67,5 +67,11 @@ if tempString.subString(originalString);
 esle
     stmt
 ------------------------------------------
-1. IIT Kharagpur SOrting technique
+1. IIT Kharagpur Sorting technique
 2. Selection sort implementation, efficiency and optimazation
+--------------------------------------
+1. Implement Stack using ArrayList perform both operations at front
+push() pop() displatStack()
+2. Implement Queue using ArrayList, insert at front and delete from rear
+enQueue() deQueue() displayQueue()
+3. Implement Queue using ArrayList, insert at rear and delete from front

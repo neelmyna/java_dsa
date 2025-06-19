@@ -1162,3 +1162,238 @@ public class QuickSort {
 	}
 }
 ---------------------------------------------
+import java.util.Scanner;
+public class Main {
+    public static void main(String... args) {
+        Scanner scan = new Scanner(System.in);
+        int firstNum = scan.nextInt();
+        int secondNum = scan.nextInt();
+        int thirdNum = scan.nextInt();
+        int fourthNum = scan.nextInt();
+        
+        int output1 = (firstNum + secondNum) * thirdNum;
+        int output2 = (secondNum - fourthNum) / firstNum;
+        int output3 = firstNum * fourthNum + thirdNum;
+        int output4 = (firstNum + secondNum + thirdNum + fourthNum) / 2;
+        System.out.println("Result of operation 1: " + output1);
+        System.out.println("Result of operation 2: " + output2);
+        System.out.println("Result of operation 3: " + output3);
+        System.out.println("Result of operation 4: " + output4);
+    }
+} 
+----------------------------------------------------
+BITWISE OPERATORS:
+
+& | ^ >> << ~
+
+byte num1 = 29;
+byte num2 = 18;
+int result = num1 & num2;
+System.out.println("Num1 and Num2 = " + result);
+result = num1 & num2;
+System.out.println("Num1 and Num2 = " + result);
+result = num1 | num2;
+System.out.println("Num1 and Num2 = " + result);
+result = num1 ^ num2;
+System.out.println("Num1 and Num2 = " + result);
+result = ~num1;
+System.out.println("Num1 and Num2 = " + result);
+result = num1 << 3;
+System.out.println("Num1 and Num2 = " + result);
+result = num2 >> 2;
+System.out.println("Num1 and Num2 = " + result);
+---------------------------------------------------------
+
+00011101
+00010010
+--------
+00010000  &  16
+00011111  |  31
+00001111  ^  15
+11100010  ~ -30  
+            -24   num1 << 3
+			  4   num1 >> 2
+
+-128+98=-30
+
+00011101
+00111010
+01110100
+11101000
+
+11101000
+-128+64+32+8=-24
+
+00010010
+00001001
+00000100
+
+1. Flip the Nth bit of an int variable.
+2. Flip all the bits of a variable and print its value.
+3. Masking....
+----------------------------------------------------
+INTERVIEW SKILLS:
+
+MCQ test:
+MCSR:
+1. Direct method
+2. Indirect method
+MCMR:
+1. 
+-ve Marking:
+1. 25% .25
+
+o1
+o2
+o3
+o4
+---------------------------------------------------------------
+inputNum  = 8476273
+outputNum = 8476327
+
+in = 12345
+on = 12354
+
+in = 98765
+on = NA
+----------------------------------------
+
+int num = scanner.nextInt();
+String inputNum = String.valueOf(num);
+char[] numAsArray = inputNum.toCharArray();
+Arrays.sort(numAsArray);
+inputNum = String(numAsArray);
+int smallNum = Integer.ParseInt(inputNum);
+
+StringBuilder sb = new StringBuilder(inputNum);
+sb.reverse();
+inputNum = sb.toString());
+int bigNum = Integer.ParseInt(inputNum);
+
+int differenceNum = bigNum - smallNum;
+---------------------------------------------------------
+Program skeleton: 
+main() {
+	input();
+	
+	output = logic();
+	
+	printOutput(output);
+}
+------------------------------------------------
+package programs;
+
+public class Person {
+	public int id;
+	public String name;
+	
+}
+
+class Student extends Person {
+	public String branch;
+	public int semester;
+	
+}
+
+class UserClass {
+	public static void main() {
+		Student student1 = new Student();
+		Person person1 = new Person();
+		Person person2 = new Student(); // Inheritance
+		Student student2 = new Person();
+		Object object1 = new Student();
+		Object object2 = new Person();
+		Object object3 = new Object();
+		Person person3 = new Object();
+		
+		student1.semester = 4;
+		student2.semester = 2;
+		person3.name = "nithin";
+		object1.name = "harish";
+		object2.branch = "ece";
+	}
+}
+--------------------------------------
+package programs;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PersonStack {
+	private int stackPtr;
+	List <Person> stack;
+	
+	{
+		stackPtr = -1;
+		stack = new ArrayList<>();
+	}
+	
+	public void push(Person person) {
+		stack.add(person);
+		stackPtr++;
+	}
+	
+	public Person pop() {
+		if(stackPtr == -1) { // check if the stack is empty
+			System.out.println("Stack is empty");
+			return null; // to say that no element of the stack was popped
+		}
+		Person person = stack.get(stackPtr); // copy last ele in list
+		stack.remove(stackPtr); // delete last ele from list
+		stackPtr--;
+		return person; // return the popped element from the stack
+	}
+	
+	public void displayStack() {
+		if(stack.isEmpty()) {
+			System.out.println("Stack is empty");
+			return;
+		}
+		System.out.printf("%-5s %s", "ID", "NAME");
+		System.out.println("\n------------------");
+		for(int i = stack.size()-1; i >= 0; i--) {
+			Person person = stack.get(i);
+			int id = person.getId();
+			String name = person.getName();
+			System.out.printf("%-5d %s\n", id, name);
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		PersonStack personStack = new PersonStack();
+		int choice = 0;
+		int numberOfOperations = 10;
+		do {
+			System.out.print("1:Push 2:Pop 3:DisplayStack 4:Exit. \t Your choice? ");
+		choice = scanner.nextInt();
+		switch(choice) {
+		case 1 : 
+			System.out.println("Enter Id and Name of the Person:");
+			int id = scanner.nextInt();
+			String name = scanner.next();
+			personStack.push(new Person(id, name));
+			break;
+		case 2 :
+			Person person = personStack.pop();
+			if(person != null)
+				System.out.println("Popped Person is " + person);
+			break;
+		case 3 :
+			personStack.displayStack();
+			break;
+		case 4 :
+			personStack.stack = null;
+			numberOfOperations = 0;
+			break;
+		default:
+			System.out.println("Invalid choice enetered");
+		}
+		numberOfOperations--;
+		}while(numberOfOperations >= 0);
+		System.out.println("End of Program");
+	}
+}
+---------------------------------------------------
