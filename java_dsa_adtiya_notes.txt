@@ -1397,3 +1397,17 @@ public class PersonStack {
 	}
 }
 ---------------------------------------------------
+DAY9 FRIDAY 20-06-2025
+
+STEPS TO DOWNLOAD MYSQL:
+Google search: Download MySQL
+Link: www.mysql.com/downloads
+scroll down in the page and click: Mysql Community Downloads
+Next page, Click Mysql Installer for windows
+Next page, click the button with 350+ MB size file
+
+Steps to Install MySql:
+
+
+
+----------------------------------------------------------

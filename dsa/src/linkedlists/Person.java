@@ -1,4 +1,4 @@
-package programs;
+package linkedlists;
 
 public class Person {
 	private int id;
@@ -32,6 +32,6 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + "] -> ";
+		return "[id=" + id + ", name=" + name + "] -> ";
 	}
 }

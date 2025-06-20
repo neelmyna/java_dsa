@@ -75,3 +75,40 @@ push() pop() displatStack()
 2. Implement Queue using ArrayList, insert at front and delete from rear
 enQueue() deQueue() displayQueue()
 3. Implement Queue using ArrayList, insert at rear and delete from front
+4. Multi elevator Optimized algorithm.
+
+Linked List Problems:
+1. Implement the following operations on a SLL:
+    insert node at rear
+    insert node at front
+    insert node at position
+    delete node from rear
+    delete node from front
+    delete node from position
+    display list
+        from front to rear
+        from rear to front (recursive)
+2. Implement Stack using SLL
+    Do both the operations (psuh and pop) at rear
+    Do both the operations (psuh and pop) at front
+3. Implement Queue using SLL
+    Insert at rear, delete from front
+    Insert at front, delete from rear
+4. Reverse a singly LL
+5. Reverse a DLL
+6. Merge 2 sorted SLLs into one sorted list
+7. Check if to S(D)LLs converges at some point.
+8. Seperate the given SLL into 2 respectively having Prime numbers and composite numbers.
+
+Problem Solving Skills Improvement Step by Step:
+1. Single line instructions (sum=, product=..., arithmetic expressions)
+2. Conditional problem solving (simple if, if-else, nested if-else, complicated nesting)
+3. O(n) problem solving on loops
+4. O(n2) problem solving on loops
+5. O(n) probl;em solving on Arrays and strings
+6* Implement the string handling methods.
+7* Linked List probelms
+8** Scenario based problem solving
+9* CRUD operations probelm
+10** Real life problems
+--------------------------------------------
