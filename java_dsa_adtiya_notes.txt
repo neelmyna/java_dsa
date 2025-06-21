@@ -1437,6 +1437,9 @@ DAY10 SATURDAY 21-06-2025
 
 MCQ Test-1 Link:
 https://docs.google.com/forms/d/1382u2m4NAkmzWgpx4UsW41W9hx2ucmFVSZcHjghAQ3o/edit
+
+Feedback Link:
+https://forms.gle/hC1BNqAHppcbKpYY7
 -----------------------------------------
 Things To DO Next Week (21st Saturday till 29th Sunday):
 1. Coding test on searching Sorting Techniques on 21st Saturday
