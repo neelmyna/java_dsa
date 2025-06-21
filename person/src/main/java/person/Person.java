@@ -4,16 +4,31 @@ public class Person {
 	private int id;
 	private String name;
 	private String location;
-	private char gender;
+	private String gender;
 	private short age;
 
-	public Person(String name, String location, char gender, short age) {
+	public Person(int id, String name, String location, String gender, short age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.location = location;
+		this.gender = gender;
+		this.age = age;
+	}
+
+	public Person(String name, String location, String gender, short age) {
 		super();
 		this.name = name;
 		this.location = location;
 		this.gender = gender;
 		this.age = age;
 	}
+
+	public Person() {
+		super();
+	}
+
+
 
 	public String getName() {
 		return name;
@@ -31,11 +46,11 @@ public class Person {
 		this.location = location;
 	}
 
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 

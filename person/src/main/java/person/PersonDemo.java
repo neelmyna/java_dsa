@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PersonDemo {
 	
-	private static Scanner scanner;
+	public static Scanner scanner;
 	
 	static {
 		scanner = new Scanner(System.in);
@@ -13,6 +13,7 @@ public class PersonDemo {
 	private static int runMenu(int choice) {
 		
 		System.out.print("1:Insert 2:Search 3:Update 4:Delete 5:ListAll 6:Exit \n Your Choice please: ");
+		choice = scanner.nextInt();
 		switch(choice) {
 		case 1 : PersonService.createPerson(); break;
 		case 2 : PersonService.readPerson(); break;
@@ -20,6 +21,7 @@ public class PersonDemo {
 		case 4 : PersonService.deletePerson(); break;
 		case 5 : PersonService.listAllPersons(); break;
 		case 6 : choice = 0;
+				 break;
 		default: System.out.println("Invalid choice enetered");
 		}
 		return choice;
@@ -34,5 +36,6 @@ public class PersonDemo {
 	
 	public static void main(String[] args) {
 		startApp();
+		System.out.println("Person App exited");
 	}
 }
