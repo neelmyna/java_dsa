@@ -1496,3 +1496,20 @@ select * from students where name is "null";
 -------------------------
 Person: id, name, loaction, gender, age
 create table people(id int primary key auto_increment, name varchar(50) not null, location varchar(50), gender varchar(2), age smallint default(0));
+
+desc people;
+// Prints meta data of the table
+
+insert into people(name, location, gender, age) values("mahesh", "rajahmundry", "m", 21);
+
+insert into people(name, location, gender, age) values("mahesh", "rajahmundry", "m", 21);
+insert into people(name, location, gender, age) values("mahesh", "rajahmundry", "m", 21);
+
+insert into people(name, location, gender, age) values("mahesh", "rajahmundry", "m", 21);
+
+File -> new -> project
+	(dialogue box ) -> Maven -> Maven Project
+	Select -> Create a simple project
+	Group id, Artifact Id, Name, Description  (person)
+	Click Finish
+
