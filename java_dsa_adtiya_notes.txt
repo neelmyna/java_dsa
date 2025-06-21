@@ -1437,4 +1437,62 @@ DAY10 SATURDAY 21-06-2025
 
 MCQ Test-1 Link:
 https://docs.google.com/forms/d/1382u2m4NAkmzWgpx4UsW41W9hx2ucmFVSZcHjghAQ3o/edit
-----------------------------------------------------------
+-----------------------------------------
+Things To DO Next Week (21st Saturday till 29th Sunday):
+1. Coding test on searching Sorting Techniques on 21st Saturday
+2. Every day 2 problems (minimum) must be solved on CodeKata till 29th Sunday
+3. Coding test on Linked Lists on Wednesday 25th June
+4. Coding test on Random topics on Saturday 28th June 
+--------------------------------------------------------------
+Entity: Person
+	id, name, loaction, gender, age
+Entity:
+	id, airline, source, destination, fare, duration, dateOfInception
+
+byte, short, int, long
+tinyint, smallint, int, bigint
+
+$ mysql -u root -p  <Enter>
+<Enter the password>
+
+To make the mysql command (CLI) available every where, add the below path to Environment Variables.
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+Win Search: Env
+Click Environment variables button
+Now double click Path (on top list)
+Now Click New
+Now paste the Path
+Click Ok ok Ok
+
+In Java (any language or backend) the entity names must be Student, Employee, Bus, Person, Flight
+The same names respectively in DB must be students, employees, buses, people, flights
+
+project		-		database
+classes		-		tables
+instance Vars		fields/columns
+setters(conditions)	constraints
+
+DDL (create, alter)
+informations
+	1. fields (name, DT, constraints)
+	2. auto increment info
+
+delete * from students;
+	Only data (rows) of the table is deleted. No info is deleted
+truncate table students;
+	Data and the auto increment info is deleted (meta data remains)
+drop table students;
+	Delete everything (rows/data, meta data, auto increment data)
+
+select * from students where name = "null";
+	Checking if the student name is "null"
+select * from students where name = null;
+	Checking if the student name is the value present in the variable null
+select * from students where name is null;
+	Checking if name of the student is empty
+select * from students where name is "null";
+	Syntax Error
+-------------------------
+Person: id, name, loaction, gender, age
+create table people(id int primary key auto_increment, name varchar(50) not null, location varchar(50), gender varchar(2), age smallint default(0));
